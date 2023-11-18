@@ -43,9 +43,7 @@ double multiplication = subtraction1 * subtraction2 * subtraction3;
 
 double multiplication1 = totalNumberOfSides * multiplication;
 
-double sqrt;
- 
-double squareRoot = sqrt(multiplication1);
+double squareRoot = (multiplication)**0.5;
 
 System.out.printf("area is %f%n", squareRoot);  
 
