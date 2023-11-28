@@ -1,0 +1,1 @@
+print(number\tsquare\tcube\t)
