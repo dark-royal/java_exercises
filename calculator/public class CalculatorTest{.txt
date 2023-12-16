@@ -1,0 +1,13 @@
+public class CalculatorTest{
+
+
+	public void testThatCalculatorCanAddTwoPositiveNumbers(){
+
+		Calculator calculator = new Calculator();
+
+
+
+	}
+
+
+}

@@ -10,7 +10,7 @@ System.out.println("Enter a number");
 int number = input.nextInt();
 
 int count =  1;
-//int number1 = 0;
+
 
 	if(number < 1 || number > 12){
 		System.out.println("invalid number");

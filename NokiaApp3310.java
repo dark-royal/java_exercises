@@ -1,8 +1,7 @@
 
-
 import java.util.Scanner;
 
-public class Nokia3310{
+public class NokiaApp3310{
 private static Scanner input = new Scanner(System.in);
 
 public static void main(String[] args){
@@ -110,6 +109,8 @@ switch(number){
 	}
 	
 }
+
+
 public static void search() {
 System.out.println("0. Exit");
 
@@ -131,7 +132,10 @@ int number = input.nextInt();
 if(number == 0){
 	phoneBook();
 	}
-}																						
+
+}
+
+																						
 public static void addName() {
 System.out.println("0.Exit");
 
@@ -141,6 +145,7 @@ int number = input.nextInt();
 if(number == 0){
 	phoneBook();
 	}
+
 }
 
 public static void erase() {
@@ -177,6 +182,7 @@ int number = input.nextInt();
 if(number == 0){
 	phoneBook();
 	}
+
 }
 
 public static void sendBCard() {
@@ -189,6 +195,10 @@ if(number == 0){
 	phoneBook();
 	}
 }
+
+
+
+
 
 
 
@@ -219,7 +229,9 @@ int number = input.nextInt();
 
 if(number == 0){
 	options();
+
 	}
+
 }
 
 
@@ -262,7 +274,8 @@ System.out.println("""
 	7.Messages Setting
 	8.Info service
 	9.Voice mailbox number
-	10.Service command editor""");
+	10.Service command editor
+	0. Exit""");
 
 
 System.out.println("Enter number: ");
@@ -278,6 +291,8 @@ switch(number4){
 	case 8->infoService();
 	case 9->voiceMailboxNumber();
 	case 10->serviceCommandEditor();
+	case 0->mainMenu();
+
 	}
 }
 
@@ -316,6 +331,7 @@ int number = input.nextInt();
 
 if(number == 0){
 	messages();
+
 	}
 }
 
@@ -353,6 +369,7 @@ int number = input.nextInt();
 
 if(number == 0){
 	messages();
+
 	}
 }
 
@@ -392,46 +409,16 @@ int number = input.nextInt();
 
 switch(number){
 	case 1->messageCentreNumber();
-
+	case 2->messagesSentAs();
+	case 3->messageValidity();
+	case 0->messagesSetting();
 	}
+	
 }
-
-public static void set1(){
-
-System.out.print("Enter option: ");
-int number = input.nextInt();
-
-switch(number){
-	case 1->messagesSentAs();
-}
-}
-
-
-
-System.out.print("Enter option: ");
-int number = input.nextInt();
-
-switch(number){
-	case 1->messageValidity();
-
-System.out.print("Enter option: ");
-int number = input.nextInt();
-
-if(number == 0)
-	set1();
-
-
-
-
-System.out.println("Enter number: ");
-int number = input.nextInt();
-
-if(number == 0){
-	messagesSetting();
 
 					
 
-public static void messageCentrenumber() {
+public static void messageCentreNumber() {
 System.out.println("0.Exit");
 
 System.out.println("Enter number: ");
@@ -443,7 +430,7 @@ if(number == 0){
 	}
 }
 
-public static void messageSentAs() {
+public static void messagesSentAs() {
 System.out.println("0.Exit");
 
 System.out.println("Enter number: ");
@@ -479,11 +466,17 @@ System.out.println("""
 System.out.println("Enter number: ");
 int number = input.nextInt();
 
-if(number == 0){
-	messagesSetting();
+switch(number){
+	case 1->deliveryReports();
+	case 2->replyViaSameCentre();
+	case 3->characterSupport();
+	case 0->messagesSetting();
+
+
 
 	}
 }
+
 
 public static void deliveryReports() {
 System.out.println("0.Exit");
@@ -581,104 +574,341 @@ System.out.println("""
 	5.Show call duration
 	6.Show call costs
 	7.call cost settings
-	8.Prepaid credit""");
+	8.Prepaid credit
+	0. Exit""");
+
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+switch(number){
+	case 1->missedCalls();
+	case 2->receivedCalls();
+	case 3->dialedNumbers();  
+	case 4->eraseRecentCallLists();
+	case 5->showCallDuration();
+	case 6->showCallCosts();
+	case 7->callCostSettings();
+	case 8->prepaidCredit();
+	case 0->mainMenu();
+	}
 }
-
-public static void callRegister(){
-System.out.println("Enter number: ");
-int number7 = input.nextInt();
-switch(number7){
-	case 1->showCallCosts();
-	case 2->callCostSettings();
-	case 3->showCallDuration();
-}
-}
-
-
-public static void missedCalls() {
-System.out.println("0.Exit");
-}
-
-public static void receivedCalls() {
-System.out.println("0.Exit");
-}
-
-public static void dailedNumbers() {
-System.out.println("0.Exit");
-}
-
-public static void eraseRecentCallLists() {
-System.out.println("0.Exit");
-}
-
-
+	
 public static void showCallDuration() {
 System.out.println("""
 	1.Last call duration
-	2.All call's duration
-	3.Received calls' duration
-	4.Dialed calls' duration
-	5.Clear timers""");
+	2.All calls duration
+	3.Received calls duration
+	4.Dialed calls duration
+	5.Clear timers
+	0. Exit""");
+
+System.out.println("Enter number: ");
+int number7 = input.nextInt();
+
+switch(number7){
+	case 1->lastCallDuration();
+	case 2->allCallsDuration();
+	case 3->receivedCallsDuration();
+	case 4->dialedCallsDuration();
+	case 5->clearTimers();
+	case 0->callRegister();
+	}
 }
 
 public static void lastCallDuration(){
-System.out.println("0.Exit");
+System.out.print("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	showCallDuration();
+	}
 }
 
-public static void allCallsDuration() {
-System.out.println("0.Exit");
+public static void allCallDuration(){
+System.out.print("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	showCallDuration();
+	}
 }
 
-public static void receivedCallsDuration(){
-System.out.println("0.Exit");
+public static void receivedCallDuration(){
+System.out.print("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	showCallDuration();
+	}
 }
 
-public static void dailedCallsDuration() {
-System.out.println("0.Exit");
+public static void dialedCallsDuration(){
+System.out.print("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	showCallDuration();
+	}
 }
 
-public static void clearTimer() {
-System.out.println("0.Exit");
-}
+public static void clearTimers(){
+System.out.print("0.Exit");
 
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	showCallDuration();
+	}
+}
 
 
 public static void showCallCosts() {
 System.out.println("""
 	1.Last call cost
 	2.All calls cost
-	3.Clear counters""");
+	3.Clear counters
+	0. Exit""");
+
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+switch(number){
+	case 1->lastCallCost();
+	case 2->allCallsCost();
+	case 3->clearCounters();
+	case 0->callRegister();
+	}
 }
 
-public static void lastCallCost() {
-System.out.println("0.Exit");
+public static void lastCallCost(){
+System.out.print("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	showCallCosts();
+	}
 }
 
-public static void allCallsCost() {
-System.out.println("0.Exit");
+public static void allCallCost(){
+System.out.print("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	showCallCosts();
+	}
 }
 
-public static void clearCounters() {
-System.out.println("0.Exit");
+public static void clearCounter(){
+System.out.print("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	showCallCosts();
+	}
 }
 
 
 public static void callCostSettings() {
 System.out.println("""
 	1.Call cost limit
-	2.Show costs in""");
+	2.Show costs in
+	0. Exit""");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+switch(number){
+	case 1->callCostLimit();
+	case 2->showCostsIn();
+	case 0->callRegister();
+	}
 }
 
-public static void callCostLimit(){
-System.out.println("0.Exit");
+public static void CallCostLimit(){
+System.out.print("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callCostSettings();
+	}
 }
 
 public static void showCostIn(){
+System.out.print("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callCostSettings();
+	}
+}
+
+
+
+
+public static void missedCalls() {
 System.out.println("0.Exit");
+
+System.out.print("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callRegister();
+	}
+
+
+}
+
+public static void receivedCalls() {
+System.out.println("0.Exit");
+
+System.out.print("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callRegister();
+	}
+
+}
+
+public static void dialedNumbers() {
+System.out.println("0.Exit");
+
+System.out.print("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callRegister();
+	}
+
+}
+
+public static void eraseRecentCallLists() {
+System.out.println("0.Exit");
+
+System.out.print("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callRegister();
+	}
+
+}
+
+
+
+
+
+public static void allCallsDuration() {
+System.out.println("0.Exit");
+
+System.out.print("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callRegister();
+	}
+
+}
+
+public static void receivedCallsDuration(){
+System.out.println("0.Exit");
+
+System.out.print("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callRegister();
+	}
+
+}
+
+
+
+
+
+
+
+public static void allCallsCost() {
+System.out.println("0.Exit");
+
+System.out.print("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callRegister();
+
+	}
+
+}
+
+public static void clearCounters() {
+System.out.println("0.Exit");
+
+System.out.print("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callRegister();
+	}
+
+}
+
+
+
+public static void callCostLimit(){
+System.out.println("0.Exit");
+
+System.out.print("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callRegister();
+	}
+}
+
+public static void showCostsIn(){
+System.out.println("0.Exit");
+
+System.out.print("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callRegister();
+	}
+
 }
 
 public static void prepaidCredit() {
 System.out.println("0.Exit");
+
+System.out.print("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callRegister();
+
+	}
 }
 
 
@@ -694,7 +924,7 @@ System.out.println("""
 	7.Warning and game tones
 	8.Vibration alert
 	9.Screen saver
-	0. mainMenu""");
+	0. Exit""");
 
 
 System.out.println("Enter option: ");
@@ -710,6 +940,7 @@ switch(number){
 	case 7->warningAndGameTones();
 	case 8->vibratingAlert();
 	case 9->screenSaver();
+	case 0->mainMenu();
 	
 	}
 }
@@ -833,43 +1064,115 @@ System.out.println("""
 	1.Call settings
 	2.Phone settings
 	3.Security settings
-	4.Restore factory settings""");
+	4.Restore factory settings
+	0.Exit""");
+
+System.out.print("Enter option: ");
+int number = input.nextInt();
+
+switch(number){
+	case 1->callSettings();
+	case 2->phoneSettings();
+	case 3->securitySettings();
+	case 4->restoreFactorySettings();
+	case 0->mainMenu();
+
+	}
 }
 
 
 
-/*public static void callSettings() {
+public static void callSettings() {
 System.out.println("""
 	1.Automatic redial
 	2.Speed dialing
 	3.Call waiting options
 	4.Own number sending
 	5.Phone line in use
-	6.Automatic answer""");
+	6.Automatic answer
+	0. Exit""");
+
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+switch(number){
+	case 1->automaticRedial();
+	case 2->speedDialing();
+	case 3->callWaitingOptions();
+	case 4->ownNumberSending();
+	case 5->phoneLineInUse();
+	case 6->automaticAnswer();
+	case 0->settings();
+
+	}
 }
 
 public static void automaticRedial() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callSettings();
+	}
 }
+
 
 public static void speedDialing() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callSettings();
+	}
 }
 
 public static void callWaitingOptions() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callSettings();
+	}
 }
 
 public static void ownNumberSending() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callSettings();
+	}
 }
 
 public static void phoneLineInUse() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callSettings();
+	}
 }
 
 public static void automaticAnswer() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	callSettings();
+	}
 }
 
 
@@ -881,73 +1184,201 @@ System.out.println("""
 	3.Welcome Notes
 	4.Network selection
 	5.Lights
-	6.Confirm SIM service actions""");
+	6.Confirm SIM service actions
+	0. Exit""");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+switch(number){
+	case 1->language();
+	case 2->cellInfoDisplay();
+	case 3-> welcomeNote();
+	case 4->networkSelection();
+	case 5->lights();
+	case 6->confirmSimServiceActions();
+	case 0->settings();
+	}
 }
 
 public static void language() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	phoneSettings();
+	}
 }
 
 public static void cellInfoDisplay() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	phoneSettings();
+	}
 }
 
 public static void welcomeNote(){
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	phoneSettings();
+	}
 }
 
 public static void networkSelection() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	phoneSettings();
+	}
 }
 
 public static void lights() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	phoneSettings();
+	}
 }
 
 public static void confirmSimServiceActions() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	phoneSettings();
+	}
 }
 
 
 
-public static void securitySetting() {
+public static void securitySettings() {
 System.out.println("""
 	1.Pin code request
 	2.Call barring service
 	3.Fixed dialing
 	4.Closed user group
 	5.Phone security
-	6.Change access codes""");
+	6.Change access codes
+	0. Exit""");
+
+System.out.print("Enter option: ");
+int number = input.nextInt();
+
+switch(number){
+	case 1->pinCodeRequest();
+	case 2->callBarringService();
+	case 3->fixedDialing();
+	case 4-> closedUserGroup();
+	case 5->phoneSecurity();
+	case 6->changeAccessCodes();
+	case 0->settings();
+	}
 }
 
 public static void pinCodeRequest() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	securitySettings();
+	}
 }
 
 public static void callBarringService() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	securitySettings();
+	}
 }
+
+
+
 
 public static void fixedDialing() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	securitySettings();
+	}
 }
+
 
 public static void closedUserGroup() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	securitySettings();
+	}
 }
+
+
 
 public static void phoneSecurity() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	securitySettings();
+	}
 }
+
 
 public static void changeAccessCodes() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	securitySettings();
+	}
 }
+
+
 
 
 public static void restoreFactorySettings() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	settings();
+	}
 }
+
 
 
 public static void callDivert() {
@@ -1007,33 +1438,90 @@ System.out.println("""
 	3.Date settings
 	4.StopWatch
 	5.Countdown timer
-	6.Auto update of date and time""");
+	6.Auto update of date and time
+	0. Exit""");
+
+
+System.out.println("Enter option:");
+int number = input.nextInt();
+
+switch(number){
+	case 1->alarmClock();
+	case 2->clockSettings();
+	case 3->dateSettings();
+	case 4->stopWatch();
+	case 5->countdownTimer();
+	case 6-> autoUpdateOfDateAndTime();
+	case 0->mainMenu();
+	}
 }
 
 
-/*public static void alarmClock() {
+public static void alarmClock() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	clock();
+	}
 }
 
 public static void clockSettings() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	clock();
+	}
 }
 
 public static void dateSettings() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	clock();
+	}
 }
 
 public static void stopWatch() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	clock();
+	}
 }
 
 public static void countdownTimer() {
 System.out.println("0.Exit");
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	clock();
+	}
 }
 
 public static void autoUpdateOfDateAndTime() {
 System.out.println("0.Exit");
-}*/
+
+System.out.println("Enter option: ");
+int number = input.nextInt();
+
+if(number == 0){
+	clock();
+	}
+}
 
 
 public static void profile() {
@@ -1059,8 +1547,7 @@ int number = input.nextInt();
 if(number == 0){
 	mainMenu();
 
-	
+	}
 }
 
 }
-

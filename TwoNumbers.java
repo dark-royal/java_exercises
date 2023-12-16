@@ -12,15 +12,7 @@ int number = scanner.nextInt();
 System.out.print("Enter power");
 int power= scanner.nextInt();
 
-/*int count = 0;
 
-int digit = 1;
-
-for numbers in range(2);
-
-digit <= firstNumber;
-
-count++*/
 
 int total = 1;
 

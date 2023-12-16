@@ -23,8 +23,7 @@ System.out.printf(                                             "Thank you,%nYour
 
 System.out.print("""
 
-hgdfhjtklgdrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-bvhhvcdhjjdsfkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkjkjjkjkk
+
 
                  """);
 

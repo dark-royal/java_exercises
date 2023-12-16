@@ -1,4 +1,4 @@
-//import java.security.SecureRandom;
+import java.security.SecureRandom;
 import java.util.*;
 
 public class Game{

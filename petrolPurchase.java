@@ -55,20 +55,15 @@ public class PetrolPurchase {
     }
 
 public double discount(double discount){
-	double discount1 = (percentageDiscount / 100) * pricePerLiter;
+	discount1 = (percentageDiscount / 100) * pricePerLiter;
 	return discount1;
 }
 public double netPurchaseAmount(double netPurchaseAmount){
-	netPurchaseAmount = (quantity * pricePerLiter) - discount(netPurchaseAmount);
+	netPurchaseAmount = (quantity * pricePerLiter) - discount1();
 	return netPurchaseAmount;
 }
 
-    /*public double getPurchaseAmount() {
-    	return purchaseAmount;
-}  
-public double getPurchaseAmount(){
-	return purchaseAmount;
-}*/
+   
 
  
 	
