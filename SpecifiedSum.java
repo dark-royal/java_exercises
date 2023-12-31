@@ -12,13 +12,14 @@ int totalNumber1 = 0;
 System.out.println("Enter number: ");
 int number = scanner.nextInt();
 
-while(number == true){
+while(true){
 	System.out.println("Enter number1: ");
 	int number1 = scanner.nextInt();
 	
 	totalNumber1 += number1;
 	count ++;
-	
+	}
+
 	if (totalNumber1 >= number){
 	System.out.println(totalNumber1 );
 	}
@@ -28,11 +29,10 @@ while(number == true){
 		System.out.println("Enter number1: ");
 		 number1 = scanner.nextInt();
 	}
-	break;
-
-}
 	
-	 
+
+	
+	 System.out.println("The total is %d",totalNumber1);
 
 
 

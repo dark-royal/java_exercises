@@ -1,29 +1,22 @@
 import java.util.Scanner;
-import java.time.LocalDate;
  
-public class HealthProfileTest{
+public class HeartProfileTest{
 public static void main(String[] args){
 
 Scanner scanner = new Scanner(System. in);
 
-HealthProfile healthProfile = new HealthProfile("Praise","Oyewole", "female", 10,22,2007);
+HeartProfile heartProfile = new HeartProfile("Praise","Oyewole", "female", 10,22,2007,50.6,4.6);
 
 
 System.out.print("Enter the user age");
 int age = scanner.nextInt();
 
-System.out.print("Enter the weight");
-double weight = scanner.nextDouble();
+int year = 0;
+int currentYear = 0;
 
-System.out.print("Enter the height");
-double height = scanner.nextDouble();
+int personAge = currentYear -  year;
 
-System.out.print("Enter the year");
-int year = scanner.nextInt();
-
-int personAge = LocalDate.now().getYear() -  year;
-
-double bmi = weight / height * height;
+int bmi = weight / height * height;
 if(bmi < 18.5)
 System.out.print("the bmi value chart is underweight");
  
@@ -36,17 +29,11 @@ System.out.print("the bmi value chart is overweight");
 if(bmi > 30.0)
 System.out.print("the bmi value chart is obesity");
 
-int maximumHeartRates = 220 - personAge;
+int maximumHeartRates = 220 - age;
 
-double targetHeartRatesRange1 = maximumHeartRates * 50/100;
+int targetHeartRateRange1 = maximumHeartRates * 50/100;
 
-double targetHeartRatesRange2 = maximumHeartRates * 85/100;
-
-System.out.printf("The person age is %d%n",personAge);
-System.out.printf("The bmi is %.2f%n", bmi);
-System.out.printf("The maximum heart rates is %d%n", maximumHeartRates);
-System.out.printf("The target heart rates range1 is %.2f%n",targetHeartRatesRange1);
-System.out.printf("The target heart rates range2 is %.2f", targetHeartRatesRange2);
+int targetHeartRateRange2 = maximumHeartRates * 85/100;
 
 
 

@@ -11,19 +11,23 @@ int largest1 = 0;
 int largest2 = 0;
 
 while(count <= 10){
+	count ++;
 
 	System.out.println("Enter number");
 	int number = scanner.nextInt();
 
 	if (number > largest1){
+	largest2 = largest1;
 	largest1 = number;
+	
+	
 	}
 	
-	if(largest2 < largest1){
-	largest2 = largest1;
-	}
+		if(number > largest1){
+		largest2 = number;
+		}
 
-	count ++;
+	
 
 }
 

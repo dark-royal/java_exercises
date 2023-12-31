@@ -1,5 +1,3 @@
-import java.time.LocalDate;
-
 public class HealthProfile{
 
 private String firstName;
@@ -68,32 +66,39 @@ public int getYear(){
 	return year;
 }
 
-public int personage(){
-	return LocalDate.now().getYear() - year;
-		//return personAge; 
+public int age(personAge){
+	int currentYear = 0;
+	age = currentYear - year;
+		return age; 
 }
 
-public int maximumHeartRates(){
-	int maximumHeartRates = 220 - personage();
+public int maximumHeartRates(maximumHeartRates){
+	maximumHeartRates = 220 - age;
 		return maximumHeartRates ;
 }
 
-public double targetHeartRatesRange1(){
-	double targetHeartRatesRange1= maximumHeartRates() * 50/100;
-		return targetHeartRatesRange1;
+public int targetHeartRateRange1(targetHeartRateRange){
+	targetHeartRateRange1 = maximumHeartRates * 50/100;
+		return targetHeartRateRange1;
 }
 
-public double targetHeartRatesRange2(){
-	double targetHeartRatesRange2= maximumHeartRates() * 85/100;
-		return targetHeartRatesRange2;
+public int targetHeartRateRange2(targetHeartRateRange){
+	targetHeartRateRange2 = maximumHeartRates * 50/100;
+		return targetHeartRateRange2;
 }
 
-public double bmi(double height, double weight){
-	double bmi = weight / (height * height);
+public double weight(weight){
+	return weight;
+}
+
+public double height(height){
+	return height;
+}
+
+public double bmi(bmi){
+	bmi = weight / height * height;
 		return bmi;
 }
-
-
 	
 	
 
