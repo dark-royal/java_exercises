@@ -21,7 +21,7 @@ for(int value: array){
 
 System.out.printf("%n%n Effects of passing array element value:%n" + "array[3] before modifyElement:%d%n",array[3]);
 
-modifyElement(array[3]);
+modifyElement(  array[3]);
 System.out.printf("array[3] after modifyElements: %d%n", array[3]);
 
 }

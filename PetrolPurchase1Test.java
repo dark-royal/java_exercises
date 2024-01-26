@@ -24,7 +24,9 @@ petrolPurchase1.setPercentageDiscount(0.5);
 petrolPurchase1.getPercentageDiscount();
 
 
-System.out.printf("the net purchase amount is %.2f",petrolPurchase1.getNetPurchaseAmount());
+
+
+System.out.printf("the net purchase amount is %.2f",petrolPurchase1.getNetPurchaseAmount);
 
 
 

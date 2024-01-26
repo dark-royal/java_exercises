@@ -73,8 +73,6 @@ public class Checkout3 {
                 product.add(input.next());
 
                 System.out.println("how many piece(s)?");
-
-                // int quantity1 = input.nextInt();
                 quantity.add(input.nextInt());
 
                 System.out.println("How much per unit?");

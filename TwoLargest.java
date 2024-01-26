@@ -23,7 +23,7 @@ while(count <= 10){
 	
 	}
 	
-		if(number > largest1){
+		if(number >  largest1){
 		largest2 = number;
 		}
 

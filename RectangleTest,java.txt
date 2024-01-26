@@ -1,0 +1,28 @@
+import javax.swing.JOptionPane;
+
+public class RectangleTest{
+
+public static void main(String[] args){
+
+String input;
+
+int length;
+
+int length;
+
+int area;
+
+input = JOptionPane.showInputDialog("Enter length");
+length = Integer.paseInt(input);
+
+input = JOptionPane.showInputDialog("Enter width");
+width = Integer.paseInt(input);
+
+area= length * width;
+
+JOptionPane.showMessageDialog(null, "Area of rectangle is", area);
+
+}
+
+
+}

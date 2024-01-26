@@ -6,7 +6,7 @@ public static void main(String[] args){
 
 Scanner scanner = new Scanner(System.in);
 
-int count = 1;
+int count = 1 ;
 int length = 0;
 int count1 = 1;
 

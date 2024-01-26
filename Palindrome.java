@@ -28,7 +28,7 @@ return true;
 
 
 if(isPalindrome)
-System.out.println(array.toString + "is a palindrome");
+System.out.println(array.toString y + "is a palindrome");
 else{
 	System.out.println(array.toString + " is not a palindrome");
 
